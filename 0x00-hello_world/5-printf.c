@@ -5,7 +5,7 @@
  *
  * Description: A C program that prints with printf  function.
  *
- * Return: alawys 0 (Success)
+ * Return: Alawys 0 (Success)
 */
 
 int main(void)
