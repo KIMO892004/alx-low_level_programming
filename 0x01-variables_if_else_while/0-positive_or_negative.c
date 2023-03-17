@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+/*more headers goes there */
 
+/*betty style doc for function maim goes there */
 /**
- * main - prints if the number is possitive,negative or
-0
- * Return: Alawys 0
+* main - prints if the number is possitive,negative or
+*
+ * Return: Alawys 0 (Success)
  */
 int main(void)
 {
