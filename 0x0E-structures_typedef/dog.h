@@ -3,9 +3,9 @@
 
 /**
  * struct k - a k struct
- * @kname: k's kname
- * @kage: k's kage
- * @kowner: owner's kname
+ * @kname: k's name
+ * @kage: k's age
+ * @kowner: owner's name
  *
  * Description: just a lone k struct in a big kitty world
  */
