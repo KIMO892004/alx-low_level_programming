@@ -2,18 +2,18 @@
 #define KAMAL_H
 
 /**
- * struct k - a k struct
- * @kname: k's name
- * @kage: k's age
- * @kowner: owner's name
+ * struct dog - a dog struct
+ * @kamal: dog's name
+ * @born: dog's born
+ * @ragab: owner's name
  *
- * Description: just a lone k struct in a big kitty world
+ * Description: just a lone dog struct in a big kitty world
  */
-struct k
+struct dog
 {
-	char *kname;
-	float kage;
-	char *kowner;
+	char *kamal;
+	float born;
+	char *ragab;
 };
 
 #endif
