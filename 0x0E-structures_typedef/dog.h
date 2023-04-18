@@ -16,11 +16,4 @@ struct k
 	char *kowner;
 };
 
-typedef struct k k_t;
-
-void init_k(struct k *d, char *kname, float kage, char *kowner);
-void print_k(struct k *d);
-k_t *new_k(char *kname, float kage, char *kowner);
-void free_k(k_t *d);
-
 #endif
