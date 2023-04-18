@@ -16,4 +16,4 @@ struct dog
 	char *ragab;
 };
 
-#endif
+#endif /* KAMAL_H */
