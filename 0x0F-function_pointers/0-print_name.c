@@ -1,14 +1,14 @@
 #include "function_pointers.h"
 
 /**
- * print_kamal - prints a kamal
- * @kamal: the string name
+ * print_name - prints a name
+ * @thename: the string name
  * @k: the printing function pointer
  *
  * Return: void
  */
-void print_kamal(char *kamal, void (*k)(char *))
+void print_name(char *thename, void (*k)(char *))
 {
-	if (kamal && k)
-		k(kamal);
+	if (thename && k)
+		k(thename);
 }
