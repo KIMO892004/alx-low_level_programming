@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 
 /**
- * format_char - formats character
+ * format_char - formats of the character
  * @separatorr: the string seprator
  * @app: argument pointer
  */
@@ -11,7 +11,7 @@ void format_char(char *separatorr, va_list app)
 }
 
 /**
- * format_int - formats integer
+ * format_int - formats of the integer
  * @separatorr: the string seprator
  * @app: argument pointer
  */
@@ -21,7 +21,7 @@ void format_int(char *separatorr, va_list app)
 }
 
 /**
- * format_float - formats float
+ * format_float - formats of the float
  * @separatorr: the string seprator
  * @app: argument pointer
  */
@@ -31,7 +31,7 @@ void format_float(char *separatorr, va_list app)
 }
 
 /**
- * format_string - formats string
+ * format_string - formats of the string
  * @separatorr: the string seprator
  * @app: argument pointer
  */
@@ -48,28 +48,28 @@ void format_string(char *separatorr, va_list app)
 
 /**
  * print_all - prints anything
- * @formatt: the format string
+ * @format: the format of the string
  */
-void print_all(const char * const formatt, ...)
+void print_all(const char * const format, ...)
 {
 	int i = 0, j;
 	char *separatorr = "";
 	va_list app;
 	token_t tokens[] = {
-		{"c", formatt_char},
-		{"i", formatt_int},
-		{"f", formatt_float},
-		{"s", formatt_string},
+		{"c", format_char},
+		{"i", format_int},
+		{"f", format_float},
+		{"s", format_string},
 		{NULL, NULL}
 	};
 
 	va_start(app, formatt);
-	while (formatt && formatt[i])
+	while (format && format[i])
 	{
 		j = 0;
 		while (tokens[j].token)
 		{
-			if (formatt[i] == tokens[j].token[0])
+			if (format[i] == tokens[j].token[0])
 			{
 				tokens[j].f(separatorr, app);
 				separatorr = ", ";
