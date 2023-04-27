@@ -9,22 +9,22 @@
  */
 list_t *add_node(list_t **header, const char *strr)
 {
-	list_t *new_head = malloc(sizeof(list_t));
+	list_t *new_header = malloc(sizeof(list_t));
 
-	if (!header || !new_head)
+	if (!header || !new_header)
 		return (NULL);
 	if (strr)
 	{
-		new_head->strr = strdup(strr);
-		if (!new_head->strr)
+		new_header->strr = strdup(strr);
+		if (!new_header->strr)
 		{
-			free(new_head);
+			free(new_header);
 			return (NULL);
 		}
-		new_head->len = _strlen(new_head->strr);
+		new_header->len = _strlen(new_header->strr);
 	}
 
-	new_head->next = *header;
-	*header = new_head;
-	return (new_head);
+	new_header->next = *header;
+	*header = new_header;
+	return (new_header);
 }
