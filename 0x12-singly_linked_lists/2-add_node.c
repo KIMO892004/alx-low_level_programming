@@ -2,29 +2,29 @@
 
 /**
  * add_node - adds a node to the start of the list
- * @header: the address of the pointer to head node
- * @strr: str field of the node
+ * @headdd: the address of the pointer to the headdd node
+ * @strr: strr field of the node
  *
  * Return: size of list
  */
-list_t *add_node(list_t **header, const char *strr)
+list_t *add_node(list_t **headdd, const char *strr)
 {
-	list_t *new_header = malloc(sizeof(list_t));
+	list_t *new_head = malloc(sizeof(list_t));
 
-	if (!header || !new_header)
+	if (!headdd || !new_head)
 		return (NULL);
 	if (strr)
 	{
-		new_header->strr = strdup(strr);
-		if (!new_header->strr)
+		new_head->strr = strdup(strr);
+		if (!new_head->strr)
 		{
-			free(new_header);
+			free(new_head);
 			return (NULL);
 		}
-		new_header->len = _strlen(new_header->strr);
+		new_head->len = _strlen(new_head->strr);
 	}
 
-	new_header->next = *header;
-	*header = new_header;
-	return (new_header);
+	new_head->next = *headdd;
+	*headdd = new_head;
+	return (new_head);
 }
