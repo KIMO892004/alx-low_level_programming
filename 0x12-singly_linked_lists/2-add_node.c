@@ -2,8 +2,8 @@
 
 /**
  * add_node - adds a node to the start of the list
- * @headdd: the address of the pointer to the headdd node
- * @strr: strr field of the node
+ * @headdd: the address of the pointer to the head node
+ * @strr: str field of the node
  *
  * Return: size of list
  */
