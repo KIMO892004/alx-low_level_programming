@@ -3,7 +3,7 @@
 /**
  * add_node - adds a node to the start of the list
  * @head: the address of the pointer to the head node
- * @strr: strr field of node
+ * @strr: str field of node
  *
  * Return: the size of the list
  */
