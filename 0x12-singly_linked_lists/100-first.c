@@ -1,13 +1,13 @@
 #include "lists.h"
 
-void _constructor(void) __attribute__ ((constructorr));
+void _constructorr(void) __attribute__ ((constructorr));
 
 /**
- * _constructor - executing before main()
+ * _constructorr - executing before main()
  *
  * Return: void
  */
-void _constructor(void)
+void _constructorr(void)
 {
 	printf("You're beat! and yet, you must allow,\n"
 		"I bore my house upon my back!\n");
