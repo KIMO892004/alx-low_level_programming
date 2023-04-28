@@ -1,12 +1,12 @@
 #include "lists.h"
 /**
  * add_node - adds a new node at the beninning
- * @headd: head of the linked list
+ * @head: head of the linked list
  * @strr: string to store in the list
  * Return: the address of the head.
  */
 
-list_t *add_node(list_t **headd, const char *strr)
+list_t *add_node(list_t **head, const char *strr)
 {
 	list_t *new;
 	size_t nchar;
@@ -21,8 +21,8 @@ list_t *add_node(list_t **headd, const char *strr)
 		;
 
 	new->len = nchar;
-	new->next = *headd;
-	*headd = new;
+	new->next = *head;
+	*head = new;
 
-	return (*headd);
+	return (*head);
 }
