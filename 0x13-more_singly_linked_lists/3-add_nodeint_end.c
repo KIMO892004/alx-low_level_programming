@@ -3,11 +3,11 @@
 /**
  * add_nodeint_end - adds a node to the bottom
  * @head: the pointer to the first node
- * @num: the value for new node
+ * @n: the value for new node
  *
  * Return: the pointer to new node
  */
-listint_t *add_nodeint_end(listint_t **head, const int num)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *new_node = malloc(sizeof(listint_t));
 	listint_t *node;
@@ -16,7 +16,7 @@ listint_t *add_nodeint_end(listint_t **head, const int num)
 		return (NULL);
 
 	new_node->next = NULL;
-	new_node->num = num;
+	new_node->n = n;
 	if (!*head)
 		*head = new_node;
 	else
