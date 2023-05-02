@@ -2,7 +2,7 @@
 
 /**
  * free_listint_safe - prints all nodes of a linkedlist
- * @: the head of the list
+ * @k: the head of the list
  * Return: the number of node printed
  */
 
@@ -33,7 +33,7 @@ size_t free_listint_safe(listint_t **k)
 
 	}
 
-	*h = 0;
+	*k = 0;
 
 	return (len);
 }
