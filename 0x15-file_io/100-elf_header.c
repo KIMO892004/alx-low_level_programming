@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
 
 	/* close file */
 	if (close(kr) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close kr %d\n", kr), exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", kr), exit(98);
 
 	return (0);
 }
