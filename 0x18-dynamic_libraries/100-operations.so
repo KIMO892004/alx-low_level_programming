@@ -1,3 +1,4 @@
 #!/bin/bash
-wget https://github.com/svelezg/low_level_programming/blob/master/0x18-dynamic_libraries/100-operations.so -P ../
-export LD_PRELOAD=../100-operations.so
+-Wall -Wextra -Werror -pedantic -c -fPIC *.c
+gcc -shared -o 100-operations.so *.o
+export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
