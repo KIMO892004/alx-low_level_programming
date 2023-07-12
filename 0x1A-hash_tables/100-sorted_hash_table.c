@@ -180,7 +180,7 @@ void shash_table_print(const shash_table_t *ht)
 		return;
 	printf("{");
 	tmpp = ht->shead;
-	while (tmpp!= NULL)
+	while (tmpp != NULL)
 	{
 		if (flag == 1)
 			printf(", ");
@@ -193,52 +193,52 @@ void shash_table_print(const shash_table_t *ht)
 
 /**
  * shash_table_print_rev - prints a sorted hash table in reverse
- * @ht: hash table to print
+ * @ht: the hash table to print
  *
  * Return: void
  */
 void shash_table_print_rev(const shash_table_t *ht)
 {
-	shash_node_t *tmp;
+	shash_node_t *tmpp;
 	char flag = 0; /* 0 before printing any data, 1 after*/
 
 	if (ht == NULL || ht->array == NULL)
 		return;
 	printf("{");
-	tmp = ht->stail;
-	while (tmp != NULL)
+	tmpp = ht->stail;
+	while (tmpp != NULL)
 	{
 		if (flag == 1)
 			printf(", ");
-		printf("'%s': '%s'", tmp->key, tmp->value);
+		printf("'%s': '%s'", tmpp->key, tmpp->value);
 		flag = 1;
-		tmp = tmp->sprev;
+		tmpp = tmpp->sprev;
 	}
 	printf("}\n");
 }
 
 /**
  * shash_table_delete - deletes a sorted hash table
- * @ht: hash table to delete
+ * @ht:the hash table to delete
  *
  * Return: void
  */
 void shash_table_delete(shash_table_t *ht)
 {
-	unsigned long int i;
+	unsigned long int k;
 	shash_node_t *next;
 
 	if (ht == NULL || ht->array == NULL || ht->size == 0)
 		return;
-	for (i = 0; i < ht->size; i++)
+	for (k = 0; k < ht->size; k++)
 	{
-		while (ht->array[i] != NULL)
+		while (ht->array[k] != NULL)
 		{
-			next = ht->array[i]->next;
-			free(ht->array[i]->key);
-			free(ht->array[i]->value);
-			free(ht->array[i]);
-			ht->array[i] = next;
+			next = ht->array[k]->next;
+			free(ht->array[k]->key);
+			free(ht->array[k]->value);
+			free(ht->array[k]);
+			ht->array[k] = next;
 		}
 	}
 	free(ht->array);
